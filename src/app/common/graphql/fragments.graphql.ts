@@ -69,10 +69,9 @@ export const CART_FRAGMENT = gql`
             type
         }
         payments {
+            id
             state
-            metadata {
-                redirectUrl
-            }
+            metadata
             method
             createdAt
         }
