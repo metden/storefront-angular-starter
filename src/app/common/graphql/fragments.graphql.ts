@@ -68,6 +68,7 @@ export const CART_FRAGMENT = gql`
             adjustmentSource
             type
         }
+        customFields
     }
     ${ASSET_FRAGMENT}
 `;
