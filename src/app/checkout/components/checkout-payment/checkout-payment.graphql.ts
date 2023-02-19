@@ -18,6 +18,7 @@ export const ADD_PAYMENT = gql`
         addPaymentToOrder(input: $input) {
             ...Cart
             ...ErrorResult
+            metadata
         }
     }
     ${CART_FRAGMENT}
