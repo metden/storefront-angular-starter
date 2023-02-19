@@ -69,7 +69,10 @@ export const CART_FRAGMENT = gql`
             type
         }
         payments {
+            state
             metadata
+            method
+            createdAt
         }
     }
     ${ASSET_FRAGMENT}
