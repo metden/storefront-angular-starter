@@ -68,6 +68,9 @@ export const CART_FRAGMENT = gql`
             adjustmentSource
             type
         }
+        payments {
+            metadata
+        }
     }
     ${ASSET_FRAGMENT}
 `;
