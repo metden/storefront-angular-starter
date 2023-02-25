@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    apiHost: 'http://localhost',
+    apiHost: 'https://metden.ir',
     apiPort: 3000,
     shopApiPath: 'shop-api',
     baseHref: '/',
