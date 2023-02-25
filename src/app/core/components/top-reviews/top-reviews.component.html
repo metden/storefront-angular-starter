@@ -1,7 +1,7 @@
 <div class="">
     <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-6xl lg:px-8">
         <h2 class="text-lg font-medium text-gray-900">
-            Recent reviews
+            بررسی های اخیر
         </h2>
         <div class="mt-6 pb-10 border-t border-gray-200 divide-y divide-gray-200 space-y-10">
 
@@ -18,9 +18,9 @@
                                      [ngClass]="i <= review.rating ? 'text-yellow-400' : 'text-gray-200'"
                                      aria-hidden="true"></fa-icon>
                         </div>
-                        <p class="ml-3 text-sm text-gray-700">
+                        <p class="ltr:ml-3 rtl:mr-3 text-sm text-gray-700">
                             {{review.rating}}
-                            <span class="sr-only">out of 5 stars</span>
+                            <span class="sr-only">از 5 ستاره</span>
                         </p>
                     </div>
 
@@ -43,7 +43,7 @@
                     </p>
                     <time
                         dateTime={review.datetime}
-                        class="ml-4 border-l border-gray-200 pl-4 text-gray-500 lg:ml-0 lg:mt-2 lg:border-0 lg:pl-0"
+                        class="ltr:ml-4 rtl:mr-4 border-l border-gray-200 pl-4 text-gray-500 lg:ml-0 lg:mt-2 lg:border-0 lg:pl-0"
                     >
                         {{review.date}}
                     </time>

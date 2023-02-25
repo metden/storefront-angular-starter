@@ -17,7 +17,7 @@
             [selectedAssetId]="product?.featuredAsset?.id"></vsf-asset-gallery>
         <div class="mt-10 px-4 sm:px-0 sm:mt-16 lg:mt-0" #zoomPreviewArea>
             <div class="">
-                <h3 class="sr-only">Description</h3>
+                <h3 class="sr-only">شرح</h3>
 
                 <div
                     class="text-base text-gray-700"
@@ -29,17 +29,17 @@
                     htmlFor="option"
                     class="block text-sm font-medium text-gray-700"
                 >
-                    Select option
+                    گزینه را انتخاب کنید
                 </label>
                 <select [(ngModel)]="selectedVariant"
-                        class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm rounded-md">
+                        class="mt-1 block w-full ltr:pl-3 rtl:pr-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm rounded-md">
                     <option *ngFor="let variant of product?.variants"
                             [ngValue]="variant">{{ variant.name }}</option>
                 </select>
             </div>
 
             <div class="mt-10 flex flex-col sm:flex-row sm:items-center">
-                <p class="text-3xl text-gray-900 mr-4">
+                <p class="text-3xl text-gray-900 ltr:mr-4 rtl:ml-4">
                     {{ selectedVariant?.priceWithTax | formatPrice }}
                 </p>
                 <div class="flex sm:flex-col1 align-baseline">
@@ -52,19 +52,19 @@
                         }"
                         (click)="addToCart(selectedVariant, qty)"
                     >
-                        <div *ngIf="!product || !qtyInCart[selectedVariant.id]; else inCartCount">Add to cart</div>
+                        <div *ngIf="!product || !qtyInCart[selectedVariant.id]; else inCartCount">به سبد خرید اضافه کنید</div>
                         <ng-template #inCartCount>
-                            <fa-icon icon="check" class="mr-2"></fa-icon>
-                            <span>{{ qtyInCart[selectedVariant.id] }} in cart</span>
+                            <fa-icon icon="check" class="ltr:mr-2 rtl:ml-2"></fa-icon>
+                            <span>{{ qtyInCart[selectedVariant.id] }} در سبد خرید</span>
                         </ng-template>
                     </button>
 
                     <button
                         type="button"
-                        class="ml-4 py-3 px-3 rounded-md flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500"
+                        class="ltr:ml-4 rtl:mr-4 py-3 px-3 rounded-md flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500"
                     >
                         <fa-icon icon="heart"></fa-icon>
-                        <span class="sr-only">Add to favorites</span>
+                        <span class="sr-only">اضافه کردن به علاقه مندی ها</span>
                     </button>
                 </div>
             </div>
@@ -75,35 +75,35 @@
             </div>
             <section class="mt-12 pt-12 border-t text-xs">
                 <h3 class="text-gray-600 font-bold mb-2">
-                    Shipping & Returns
+                    ارسال و بازگردانی
                 </h3>
                 <div class="text-gray-500 space-y-1">
                     <p>
-                        Standard shipping: 3 - 5 working days.
-                        Express shipping: 1 - 3 working days.
+                        حمل و نقل استاندارد: 3 تا 5 روز کاری.
+                        ارسال سریع: 1 تا 3 روز کاری.
                     </p>
                     <p>
-                        Shipping costs depend on delivery
-                        address and will be calculated during
-                        checkout.
+                        هزینه حمل و نقل بستگی به تحویل دارد
+                        آدرس و در طول محاسبه خواهد شد
+                        وارسی.
                     </p>
                     <p>
-                        Returns are subject to terms. Please see
-                        the <span class="underline">returns page</span>
-                        for further information.
+                        بازگشت مشروط به شرایط است. لطفا ببینید
+                        <span class="underline">صفحه بازگشت</span>
+                        برای اطلاعات بیشتر.
                     </p>
                 </div>
             </section>
         </div>
     </div>
-    <div className="mt-24">
+    <div class="mt-24">
         <vsf-top-reviews></vsf-top-reviews>
     </div>
 </div>
 
 <ng-template #addedToCartTemplate let-variant="variant" let-quantity="quantity" let-close="closeFn">
     <div class="flex">
-        <div class="mr-8">
+        <div class="ltr:mr-8 rtl:ml-8">
             <img
                 class="rounded"
                 [src]="(variant.featuredAsset?.preview || product?.featuredAsset?.preview) + '?preset=tiny'"
@@ -116,7 +116,7 @@
         <button type="button"
                 (click)="viewCartFromNotification(close)"
                 class="inline-flex items-center rounded border border-transparent bg-primary-100 px-2.5 py-1.5 text-xs font-medium text-primary-700 hover:bg-primary-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
-            View cart
+            مشاهده سبد خرید
         </button>
     </div>
 </ng-template>

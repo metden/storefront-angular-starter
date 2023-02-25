@@ -27,7 +27,8 @@
             ],
             "styles": [
               "src/styles/styles.scss",
-              "./node_modules/photoswipe/dist/photoswipe.css"
+              "./node_modules/photoswipe/dist/photoswipe.css",
+              "src/assets/css/font.css"
             ],
             "scripts": [],
             "stylePreprocessorOptions": {

@@ -4,19 +4,19 @@
 >
     <ol role="list" class="flex space-x-4 justify-center">
         <li class="flex items-center" *ngIf="!signedIn" >
-            <div class="mr-4" [class.text-primary-600]="activeStage === 1">Account</div>
-            <fa-icon icon="chevron-right" class="text-gray-300"></fa-icon>
+            <div class="ltr:mr-4 rtl:ml-4" [class.text-primary-600]="activeStage === 1">حساب کاربری</div>
+            <fa-icon icon="chevron-left" class="text-gray-300"></fa-icon>
         </li>
         <li class="flex items-center" >
-            <div class="mr-4" [class.text-primary-600]="activeStage === 2">Shipping</div>
-            <fa-icon icon="chevron-right" class="text-gray-300"></fa-icon>
+            <div class="ltr:mr-4 rtl:ml-4" [class.text-primary-600]="activeStage === 2">حمل و نقل</div>
+            <fa-icon icon="chevron-left" class="text-gray-300"></fa-icon>
         </li>
         <li class="flex items-center" >
-            <div class="mr-4" [class.text-primary-600]="activeStage === 3">Payment</div>
-            <fa-icon icon="chevron-right" class="text-gray-300"></fa-icon>
+            <div class="ltr:mr-4 rtl:ml-4" [class.text-primary-600]="activeStage === 3">پرداخت</div>
+            <fa-icon icon="chevron-left" class="text-gray-300"></fa-icon>
         </li>
         <li class="flex items-center" [class.text-primary-600]="activeStage === 4">
-            <div class="mr-4" [class.text-primary-600]="activeStage === 3">Complete</div>
+            <div class="ltr:mr-4 rtl:ml-4" [class.text-primary-600]="activeStage === 3">تکمیل</div>
         </li>
     </ol>
 </nav>

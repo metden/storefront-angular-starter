@@ -1,15 +1,15 @@
 <table class="min-w-full divide-y divide-gray-300">
     <thead class="bg-gray-50">
     <tr>
-        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Order code</th>
-        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Status</th>
-        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Total</th>
-        <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Last updated</th>
+        <th scope="col" class="px-3 py-3.5 ltr:text-left rtl:text-right text-sm font-semibold text-gray-900">کد سفارش</th>
+        <th scope="col" class="px-3 py-3.5 ltr:text-left rtl:text-right text-sm font-semibold text-gray-900">وضعیت</th>
+        <th scope="col" class="px-3 py-3.5 ltr:text-left rtl:text-right text-sm font-semibold text-gray-900">جمع</th>
+        <th scope="col" class="px-3 py-3.5 ltr:text-left rtl:text-right text-sm font-semibold text-gray-900">اخرین به روز رسانی</th>
     </tr>
     </thead>
     <tbody class="bg-white">
     <tr *ngFor="let order of orders$ | async">
-        <th scope="row" class="text-left pl-4 font-medium text-gray-700 hover:text-primary-600">
+        <th scope="row" class="ltr:text-left rtl:text-right ltr:pl-4 rtl:pr-4 font-medium text-gray-700 hover:text-primary-600">
             <a [routerLink]="['./', order.code]">
                 {{ order.code }}
             </a>

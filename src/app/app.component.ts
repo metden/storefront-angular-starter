@@ -21,16 +21,16 @@ export class AppComponent implements OnInit {
 
     navigation = {
         support: [
-            {name: 'Help', href: '#'},
-            {name: 'Track order', href: '#'},
-            {name: 'Shipping', href: '#'},
-            {name: 'Returns', href: '#'},
+            {name: 'راهنما', href: '#'},
+            {name: 'پیگیری سفارش', href: '#'},
+            {name: 'حمل و نقل', href: '#'},
+            {name: 'برگشت کالا  ', href: '#'},
         ],
         company: [
-            {name: 'About', href: '#'},
-            {name: 'Blog', href: '#'},
-            {name: 'Corporate responsibility', href: '#'},
-            {name: 'Press', href: '#'},
+            {name: 'درباره', href: '#'},
+            {name: 'بلاگ', href: '#'},
+            {name: 'مسئولیت اجتماعی شرکتی', href: '#'},
+            {name: 'مطبوعات', href: '#'},
         ],
     };
 

@@ -1,14 +1,22 @@
-import { isPlatformBrowser } from '@angular/common';
-import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from '@angular/common/http';
-import { Inject, Injectable, Injector, PLATFORM_ID } from '@angular/core';
-import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import {isPlatformBrowser} from '@angular/common';
+import {
+    HttpErrorResponse,
+    HttpEvent,
+    HttpHandler,
+    HttpInterceptor,
+    HttpParams,
+    HttpRequest,
+    HttpResponse
+} from '@angular/common/http';
+import {Inject, Injectable, Injector, PLATFORM_ID} from '@angular/core';
+import {Router} from '@angular/router';
+import {Observable} from 'rxjs';
+import {tap} from 'rxjs/operators';
 
-import { environment } from '../../../../environments/environment';
-import { NotificationService } from '../notification/notification.service';
+import {environment} from '../../../../environments/environment';
+import {NotificationService} from '../notification/notification.service';
 
-import { DataService } from './data.service';
+import {DataService} from './data.service';
 
 /**
  * The default interceptor examines all HTTP requests & responses and dislays any error notifications.
@@ -20,10 +28,14 @@ export class DefaultInterceptor implements HttpInterceptor {
         private injector: Injector,
         private router: Router,
         @Inject(PLATFORM_ID) private platformId: any,
-    ) {}
+    ) {
+    }
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        return next.handle(req).pipe(
+        return next.handle(req.clone({
+            params: (req.params ? req.params : new HttpParams())
+                .set('languageCode', 'fa')
+        })).pipe(
             tap(
                 event => {
                     if (event instanceof HttpResponse) {

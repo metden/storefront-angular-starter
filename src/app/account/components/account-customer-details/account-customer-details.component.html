@@ -1,20 +1,20 @@
 <ng-container *ngIf="form">
     <vsf-centered-card class="block max-w-sm">
         <form [formGroup]="form">
-            <div class="text-left mb-2">
-                <label for="firstName" class="text-sm text-gray-600">First name</label>
-                <div class="col-sm-9">
+            <div class="ltr:text-left rtl:text-right mb-2">
+                <label for="firstName" class="text-sm text-gray-600">نام</label>
+                <dsiv class="col-sm-9">
                     <input class="input-text" formControlName="firstName" id="firstName">
-                </div>
+                </dsiv>
             </div>
-            <div class="text-left mb-2">
-                <label for="lastName" class="text-sm text-gray-600">Last name</label>
+            <div class="ltr:text-left rtl:text-right mb-2">
+                <label for="lastName" class="text-sm text-gray-600">نام خانوادگی</label>
                 <div class="col-sm-9">
                     <input class="input-text" formControlName="lastName" id="lastName">
                 </div>
             </div>
-            <div class="text-left mb-2">
-                <label for="phoneNumber" class="text-sm text-gray-600">Phone number</label>
+            <div class="ltr:text-left rtl:text-right mb-2">
+                <label for="phoneNumber" class="text-sm text-gray-600">شماره تلفن</label>
                 <div class="col-sm-9">
                     <input class="input-text" formControlName="phoneNumber" id="phoneNumber">
                 </div>
@@ -22,7 +22,7 @@
         </form>
         <button class="btn-primary mt-3"
                 [disabled]="form.invalid || form.pristine"
-                (click)="updateDetails()">Update Details
+                (click)="updateDetails()">به روز رسانی جزئیات
         </button>
     </vsf-centered-card>
 </ng-container>
