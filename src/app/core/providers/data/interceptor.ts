@@ -34,7 +34,7 @@ export class DefaultInterceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         return next.handle(req.clone({
             params: (req.params ? req.params : new HttpParams())
-                .set('languageCode', 'fa')
+                .set('languageCode', 'fa').set('vendure-token','gelfc0hgublfjkpry3fg')
         })).pipe(
             tap(
                 event => {
