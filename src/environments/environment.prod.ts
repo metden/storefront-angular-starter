@@ -1,7 +1,7 @@
 export const environment = {
     production: true,
     apiHost: 'https://nikamo.ir',
-    apiPort: null,
+    apiPort: 3000,
     shopApiPath: 'shop-api',
     baseHref: '/',
     tokenMethod: 'cookie',
