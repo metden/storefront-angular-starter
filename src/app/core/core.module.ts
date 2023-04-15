@@ -149,7 +149,7 @@ export function apolloOptionsFactory(httpLink: HttpLink, platformId: any) {
                 }
             }),
             httpLink.create({
-                uri: `${apiHost}:${apiPort}/${shopApiPath}?vendure-token=68d70oyn8lsv92qud5ze`,
+                uri: `${apiHost}:${apiPort}/${shopApiPath}`,
                 withCredentials: true,
             })]),
     };
