@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    apiHost: 'https://metden.ir',
+    apiHost: 'https://nikamo.ir',
     apiPort: 3000,
     shopApiPath: 'shop-api',
     baseHref: '/',
